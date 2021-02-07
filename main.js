@@ -51,7 +51,7 @@ async function connectToWhatsApp() {
       let processOptions = {
         fps: 60,
         startTime: `00:00:00.0`,
-        endTime: `00:00:9.0`,
+        endTime: `00:00:09.0`,
         loop: 0,
       };
       const tempFile = path.join(
