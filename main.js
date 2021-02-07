@@ -104,6 +104,29 @@ async function connectToWhatsApp() {
       await conn.sendMessage(m.key.remoteJid, bufferwebp, MessageType.sticker);
       console.log("Pegatina enviada a: " + m.key.remoteJid);
     } else if (
+      m.message.conversation &&
+      m.message.conversation.startsWith("/imagen")
+    ) {
+      let message = m.message.conversation.replace("/imagen", "").trim();
+      let isSticker = false;
+      if (message.includes("sticker")) {
+        isSticker = true;
+        message = message.replace("sticker", "").trim();
+      }
+      let search = message;
+      let { data } = await Axios.get(
+        encodeURI(`https://api.fdci.se/rep.php?gambar=${search}`)
+      );
+      if (!data) {
+        console.log("No hay datos de: " + search);
+        return;
+      }
+      let response = await Axios.get(
+        data[Math.floor(Math.random() * data.length)],
+        {
+          responseType: "arraybuffer",
+        }
+      );
       if (!response.data) return;
       if (isSticker) {
         let sticker = await imageminWebp({ preset: "icon" })(response.data);
