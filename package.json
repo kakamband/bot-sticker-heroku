@@ -1,0 +1,30 @@
+{
+    "name": "whatsbot",
+    "version": "1.0.0",
+    "description": "Plugable Userbot for WhatsApp",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ianmazurek/WhatsBot.git"
+    },
+    "keywords": [
+        "Whatsapp-Userbot",
+        "whatsapp-bot"
+    ],
+    "author": "Tuhin Kanti Pal",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/TheWhatsBot/WhatsBot/issues"
+    },
+    "homepage": "https://github.com/TheWhatsBot/WhatsBot#readme",
+    "dependencies": {
+    "@adiwajshing/baileys": "^3.3.0",
+    "axios": "^0.21.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "imagemin-webp": "^6.0.0",
+    "streamifier": "^0.1.1"
+  }
+}

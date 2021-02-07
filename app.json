@@ -1,0 +1,16 @@
+{
+    "name": "Whatsbot",
+    "description": "Modular Userbot for Whatsapp",
+    "repository": "https://github.com/ianmazurek/WhatsBot",
+    "logo": "https://telegra.ph/file/96ccad5945c18944c5f15.png",
+    "keywords": [
+        "whatsbot",
+        "whatsapp-userbot",
+        "whatsapp-bot",
+        "whatsapp-userbot",
+        "whatsapp"
+    ],
+    "buildpacks": [
+        { "url": "heroku/nodejs" },
+    ]
+}
