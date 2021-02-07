@@ -49,7 +49,7 @@ async function connectToWhatsApp() {
       m.message.videoMessage.caption == "/sticker"
     ) {
       let processOptions = {
-        fps: 30,
+        fps: 20,
         startTime: `00:00:00.0`,
         endTime: `00:00:05.0`,
         loop: 0,
