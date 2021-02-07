@@ -49,9 +49,9 @@ async function connectToWhatsApp() {
       m.message.videoMessage.caption == "/sticker"
     ) {
       let processOptions = {
-        fps: 10,
+        fps: 60,
         startTime: `00:00:00.0`,
-        endTime: `00:00:06.0`,
+        endTime: `00:00:9.0`,
         loop: 0,
       };
       const tempFile = path.join(
