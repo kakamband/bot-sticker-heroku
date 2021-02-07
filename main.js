@@ -104,15 +104,6 @@ async function connectToWhatsApp() {
       await conn.sendMessage(m.key.remoteJid, bufferwebp, MessageType.sticker);
       console.log("Pegatina enviada a: " + m.key.remoteJid);
     } else if (
-      case 'yt':
-					if (args.length < 1) return reply('Ingrese el link')
-					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/yta2?url=${args[0]}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					teks = `*❏ Titulo* : ${anu.title}\n\n*⚠️Vídeo enviándose⚠️*`
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-					break
       if (!response.data) return;
       if (isSticker) {
         let sticker = await imageminWebp({ preset: "icon" })(response.data);
