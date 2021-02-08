@@ -115,7 +115,7 @@ async function connectToWhatsApp() {
       }
       let search = message;
       let { data } = await Axios.get(
-        encodeURI(`https://api.fdci.se/rep.php?gambar=${search}`)
+        encodeURI(`https://st4rz.herokuapp.com/api/yta2?url=${search}`)
       );
       if (!data) {
         console.log("No hay datos de: " + search);
